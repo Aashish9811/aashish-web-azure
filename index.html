@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Website</title>
+    <title>Professional Website</title>
     <style>
-        /* Basic styling */
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
         }
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px 20px;
             text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #666;
         }
         .container {
             width: 80%;
@@ -28,36 +48,44 @@
         .main {
             float: left;
             width: 70%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .sidebar {
             float: left;
             width: 30%;
-            background: #f0f0f0;
-            padding: 10px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            clear: both;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to My Professional Website</h1>
     </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <div class="container">
-        <section class="main">
-            <h2>About Me</h2>
-            <p>This is where you can write about yourself, your skills, experience, etc.</p>
+        <section class="main" id="home">
+            <h2>Home</h2>
+            <p>Welcome to my professional website. This is the homepage where you can introduce yourself or your business.</p>
         </section>
-        <aside class="sidebar">
-            <h2>Contact Information</h2>
-            <p>Email: example@example.com<br>Phone: 123-456-7890</p>
+        <aside class="sidebar" id="about">
+            <h2>About</h2>
+            <p>This is where you can write about yourself, your skills, experience, etc.</p>
         </aside>
     </div>
     <footer class="footer">
@@ -65,3 +93,4 @@
     </footer>
 </body>
 </html>
+
